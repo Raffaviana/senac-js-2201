@@ -47,6 +47,8 @@ let itensImpares = document.querySelectorAll('li:nth-child(odd)');
 //odd impar
 //even par
 
+/*
+//Como mudar a cor das linhas ímpares
 let mudaCor = Array.from(itensImpares);
 
 mudaCor.forEach(function(item){
@@ -54,3 +56,18 @@ mudaCor.forEach(function(item){
 });
 
 console.log(itensImpares);
+*/
+
+const ITENS = document.querySelector('ul.collection');
+
+console.log(ITENS.children[2].firstChild);
+
+//ITENS.children[2].firstChild.textContent = 'Estudar ainda mais';
+ITENS.children[2].firstChild.data = 'Vamos ver agora';
+ITENS.children[2].firstChild.nodeValue = 'Pelo nodeValue';
+
+const LABEL = document.querySelector('a.clear-tasks');
+
+console.log(LABEL.textContent);
+
+LABEL.textContent = 'APAGAR';
