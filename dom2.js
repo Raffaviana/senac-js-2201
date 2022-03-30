@@ -31,3 +31,5 @@ if(confirm('Quer entrar com um valor?')){
     p.innerText = 'Que pena que você não entrou com um valor :-(';
     título.style.background = 'red';
 }
+
+//fazer repeticao com numero informado entre 0 a 10 com fundo verde, caso ao contrario o valor sera invalido, sem nenhum valor sera vermelho

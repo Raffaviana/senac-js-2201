@@ -18,3 +18,5 @@ for(i = 0, c = 0;  i < 10; i++, c++){
 }
 
 console.log(p);
+
+//pegar um ID especifico, alterar com innerText e fazer as sequencias das cores

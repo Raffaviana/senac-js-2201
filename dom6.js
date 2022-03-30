@@ -5,11 +5,11 @@ LI.className = 'colletion-item';
 
 LI.id = 'nova-tarefa-qualquer';
 
-LI.setAttribute('title', 'Pare o mouse para ver');
+LI.setAttribute('title', 'Pare o mouse para ver');// criar atributo
 
-const TEXTO = document.createTextNode('Tarefa inserida dinamicamente');
+const TEXTO = document.createTextNode('Tarefa inserida dinamicamente');// exibe a frase
 
-LI.appendChild(TEXTO);
+LI.appendChild(TEXTO);//adicionar filhos
 
 console.log(LI);
 
@@ -43,3 +43,4 @@ console.log(antigoTitulo);
 
 elementoPai.replaceChild(antigoTitulo, novoTitulo);
 
+//subscrever elementos antigos com os novos

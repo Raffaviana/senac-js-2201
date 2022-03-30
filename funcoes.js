@@ -3,10 +3,10 @@ olaMundoNoLog('Bono');
 olaMundoNoLog('Carol');
 olaMundoNoLog('Alves');
 
-function olaMundoNoLog(nome){
+function olaMundoNoLog(nome){ 
     console.log(`Olá ${nome}`);
 }
-
+//criar funcao exibindo em ordem os nomes compostos
 const SOMA = function (a, b){
 
     return a + b;
@@ -15,7 +15,7 @@ const SOMA = function (a, b){
 let resultado = SOMA(2, 2);
 
 console.log(resultado);
-
+//soma das funcioes
 (function(a, b){
     console.log(a + b);
 })(3, 3);
@@ -64,3 +64,5 @@ function nomeMesCorrente(){
 }
 
 console.log(nomeMesCorrente());
+
+//exebir no console mes atual do windows
