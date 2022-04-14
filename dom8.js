@@ -66,7 +66,7 @@ const valorDoUsuario = document.querySelector('input#taks').value;
     const A = document.createElement('a');
     A.className = 'delete-item secondary-content';
     A.setAttribute('href', '#');
-    /nova tarefa
+    //nova tarefa
     const I = document.createElement('i');
     
     I.className = 'fa fa-remove';
@@ -79,4 +79,3 @@ const valorDoUsuario = document.querySelector('input#taks').value;
     const UL = document.querySelector('ul.collection');
     UL.appendChild(LI);
     document.querySelector('input#task').value = '';
-});
