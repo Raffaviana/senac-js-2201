@@ -10,7 +10,8 @@ function carregaMonitorDeEventos(){
     document.addEventListener('DOMContentLoaded', pegaTarefa);
     FORMULARIO.addEventListener('submit', adicionarTarefa);
     LISTA.addEventListener('click', apagaTarefa);
-    BTN_LIMPAR.addEventListener('click', apagarTodasTarefas);
+    BTN_LIMPAR.addEventListener('click', 
+    apagarTodasTarefas);
     FILTRO.addEventListener('click', filtraTarefa);
 }
 
@@ -54,24 +55,46 @@ function filtraTarefa(evento){
     })
 }
 
-function apagarTodasTarefas(evento);
+function apagarTodasTarefas(evento){
 
     evento.preventdefault();
 
     LISTA.innerHTML = '';
-    
-    if(evento.target.parentElement.classList.constins('apaga-tarefa')){
-        evento.target.parentElement.parentElement.parentElement.remove();
-    }
+
+    apagarTodasDoLocalStorage();
+}
+
+function apagarTodasDoLocalStorage(){
+
+    localStorage.removeItem('tarefas');
+}
+
 
 function apagaTarefa(evento){
     
     if(evento.target.parentElement.classList.constins('apaga-tarefa')){
         evento.target.parentElement.parentElement.remove();
     }
-
+    apagaDoLocalStorage(evento.target.parentElement.parentElement);
 }
 
+function apagaDoLocalStorage(tarefaParaApagar){
+    let tarefas;
+
+    if(localStorage.getItem('tarefas') === null){
+        tarefas = [];
+    }else{
+        tarefas = JSON.parse(localStorage.getItem('tarefas'));
+    }
+
+    tarefas.forEach(function(tarefa, indice){
+        if(tarefaParaApagar.textContent === tarefa){
+            tarefas.splice(indice, 1);
+        }
+    });
+
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+}
 function adicionarTarefa(evento){
 
     evento.preventdefault();
@@ -99,7 +122,6 @@ function adicionarTarefa(evento){
     }
 
 }
-
 
 function gravaTarefaNoLocalStorage(){
 
