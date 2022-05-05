@@ -1,1 +1,1 @@
-Rafa blu blu
+{"real": 1,"moedas":{"dolar": 4.95,"euro": 5.21,"libra": 5.83}}

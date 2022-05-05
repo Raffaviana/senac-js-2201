@@ -4,7 +4,7 @@ document.querySelector('xhr').addEventListener('click', carregaConteudo);
 function carregaConteudo(){
     const XHR = new XMLHttpRequest();
 
-    XHR.open('GET', 'http://10.135.236.37:5500/aula10/ajax/conteudo.txt', true); // true = assincrono, sincrono está sendo descontinuado
+    XHR.open('GET', 'http://10.135.236.37:5500/ajax/conteudo.txt', true); // true = assincrono, sincrono está sendo descontinuado
 
     XHR.onload = function(){
         if(this.status === 200){//HTTP code 200 OK
